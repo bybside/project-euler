@@ -2,6 +2,7 @@ def main():
     n = 35
     print(sum_even_fib(n))
 
+# time complexity: O(n)
 def sum_even_fib(n: int):
     """
     sum a range of even fibonacci values
