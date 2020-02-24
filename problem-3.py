@@ -1,7 +1,10 @@
+from math import sqrt
+
 def main():
     n = 600851475143
     print(largest_prime_factor(n))
 
+# time complexity: O(sqrt(n))
 def largest_prime_factor(n: int):
     pf = []
     # halve n until odd
@@ -10,7 +13,7 @@ def largest_prime_factor(n: int):
         n //= 2
     # find all odd prime factors
     i = 3
-    while i < n**(1/2):
+    while i < sqrt(n):
         while n % i == 0:
             pf.append(i)
             n //= i
