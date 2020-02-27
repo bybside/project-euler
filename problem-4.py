@@ -5,10 +5,10 @@ def main():
 # number of digits in each desired factor
 def largest_palindrome(fact_length: int):
     n = 0
-    u_bound = 10**fact_length
+    u_bound = (10**fact_length)-1
     l_bound = 10**(fact_length-1)
-    for i in range(l_bound, u_bound):
-        for j in range(l_bound, u_bound):
+    for i in range(u_bound, l_bound, -1):
+        for j in range(i, l_bound, -1):
             val = i*j
             if val > n and is_palindrome(val):
                 n = val
