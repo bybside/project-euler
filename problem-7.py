@@ -11,7 +11,7 @@ def nth_prime(n: int):
     if n <= 0:
         return -1
     # start testing numbers at 3;
-    # test until nth prime is reached
+    # test odd numbers until nth prime is reached
     p_count = 1
     p_num = 2
     i = 3
@@ -19,12 +19,10 @@ def nth_prime(n: int):
         if is_prime(i):
             p_num = i
             p_count += 1
-        i += 1
+        i += 2
     return p_num
        
 def is_prime(n: int):
-    if n % 2 == 0:
-        return False
     for j in range(3, (n // 2) + 1, 2):
         if n % j == 0:
             return False
