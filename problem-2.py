@@ -12,7 +12,7 @@ def sum_even_fib(n: int):
     for i in range(1, n + 1):
         fib_val = fib_util(i, cache)
         if fib_val > 4000000:
-            return s
+            break
         if fib_val % 2 == 0:
             s += fib_val
     return s
